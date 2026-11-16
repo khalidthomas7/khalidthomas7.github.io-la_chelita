@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact | La Chelita</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
+
+<!-- Navigation Bar -->
+<nav class="navbar">
     <div class="logo">
-        <img src="logo.png" alt="Restaurant Logo">
+        <a href="index.html">
+            <img src="logo.png" alt="Restaurant Logo">
+        </a>
     </div>
-    
-    <ul>
+
+    <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="menu.html">Menu</a></li>
         <li><a href="reservation.html">Reservation</a></li>
@@ -20,5 +24,107 @@
         <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
+
+<!-- Page Header -->
+<header class="page-header">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you.</p>
+</header>
+
+<main class="contact-page">
+
+    <!-- Left: Heading -->
+    <section class="contact-text">
+        <h2>Get in Touch</h2>
+        <p>Have a question, a compliment, or an idea? Send us a message and we'll get back to you as soon as we can.</p>
+    </section>
+
+    <!-- Right: Form -->
+    <section class="contact-card">
+        <form id="contact-form" class="contact-form">
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-reserve">Send Message</button>
+        </form>
+
+        <!-- Shown after the form is submitted -->
+        <div id="confirmation" class="confirmation" hidden>
+            <h3>Thank you!</h3>
+            <p>Your message was sent. We'll be in touch soon.</p>
+        </div>
+    </section>
+
+</main>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+
+        <div class="footer-col footer-brand">
+            <h3>La Chelita</h3>
+            <p>Family recipes, handmade tortillas, and the flavors of Jalisco, with a little Texas on the side.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Hours</h4>
+            <ul>
+                <li>Mon – Fri: 8:00 AM – 9:00 PM</li>
+                <li>Saturday: 8:00 AM – 10:00 PM</li>
+                <li>Sunday: 9:00 AM – 8:00 PM</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Visit Us</h4>
+            <ul>
+                <li>123 Main Street</li>
+                <li>Your City, TX 00000</li>
+                <li>(555) 123-4567</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 La Chelita. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+    // Shows the thank-you message instead of submitting
+    // (replace this once you have a real place to send the form)
+    const form = document.getElementById("contact-form");
+    const confirmation = document.getElementById("confirmation");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        form.hidden = true;
+        confirmation.hidden = false;
+    });
+</script>
+
 </body>
 </html>
