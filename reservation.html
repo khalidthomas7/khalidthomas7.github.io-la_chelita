@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reservations | La Chelita</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
+
+<!-- Navigation Bar -->
+<nav class="navbar">
     <div class="logo">
-        <img src="logo.png" alt="Restaurant Logo">
+        <a href="index.html">
+            <img src="logo.png" alt="Restaurant Logo">
+        </a>
     </div>
-    
-    <ul>
+
+    <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="menu.html">Menu</a></li>
         <li><a href="reservation.html">Reservation</a></li>
@@ -20,5 +24,181 @@
         <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
+
+<!-- Page Header -->
+<header class="page-header">
+    <h1>Reserve a Table</h1>
+    <p>There's always a place for you at our table.</p>
+</header>
+
+<main class="reservation-page">
+
+    <!-- Reservation Form -->
+    <section class="reservation-card">
+        <h2>Book Your Visit</h2>
+
+        <form id="reservation-form" class="reservation-form">
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Time</label>
+                    <select id="time" name="time" required>
+                        <option value="" disabled selected>Select a time</option>
+                        <option>8:00 AM</option>
+                        <option>9:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>1:00 PM</option>
+                        <option>2:00 PM</option>
+                        <option>5:00 PM</option>
+                        <option>6:00 PM</option>
+                        <option>7:00 PM</option>
+                        <option>8:00 PM</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="guests">Number of Guests</label>
+                <select id="guests" name="guests" required>
+                    <option value="" disabled selected>Select party size</option>
+                    <option>1 guest</option>
+                    <option>2 guests</option>
+                    <option>3 guests</option>
+                    <option>4 guests</option>
+                    <option>5 guests</option>
+                    <option>6 guests</option>
+                    <option>7 guests</option>
+                    <option>8 guests</option>
+                    <option>9+ guests (we'll call you)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Special Requests <span class="optional">(optional)</span></label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Birthday, allergies, high chair, patio seating..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-reserve">Reserve My Table</button>
+        </form>
+
+        <!-- Shown after the form is submitted -->
+        <div id="confirmation" class="confirmation" hidden>
+            <h3>Thank you!</h3>
+            <p>We got your request and will email you shortly to confirm your table.</p>
+        </div>
+    </section>
+
+    <!-- Info Card -->
+    <aside class="info-card">
+        <h2>Visit Us</h2>
+
+        <div class="info-block">
+            <h3>Hours</h3>
+            <ul>
+                <li><span>Mon – Fri</span> <span>8:00 AM – 9:00 PM</span></li>
+                <li><span>Saturday</span> <span>8:00 AM – 10:00 PM</span></li>
+                <li><span>Sunday</span> <span>9:00 AM – 8:00 PM</span></li>
+            </ul>
+        </div>
+
+        <div class="info-block">
+            <h3>Address</h3>
+            <p>123 Main Street<br>Your City, TX 00000</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Questions?</h3>
+            <p>Call us at <strong>(555) 123-4567</strong></p>
+        </div>
+
+        <p class="info-note">Parties of 9 or more? Please call so we can set up the perfect table for you.</p>
+    </aside>
+
+</main>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+
+        <div class="footer-col footer-brand">
+            <h3>La Chelita</h3>
+            <p>Family recipes, handmade tortillas, and the flavors of Jalisco, with a little Texas on the side.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Hours</h4>
+            <ul>
+                <li>Mon – Fri: 8:00 AM – 9:00 PM</li>
+                <li>Saturday: 8:00 AM – 10:00 PM</li>
+                <li>Sunday: 9:00 AM – 8:00 PM</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Visit Us</h4>
+            <ul>
+                <li>123 Main Street</li>
+                <li>Your City, TX 00000</li>
+                <li>(555) 123-4567</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 La Chelita. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+    // Don't allow dates in the past
+    const dateInput = document.getElementById("date");
+    dateInput.min = new Date().toISOString().split("T")[0];
+
+    // Show the thank-you message instead of submitting
+    // (replace this once you have a real place to send the form)
+    const form = document.getElementById("reservation-form");
+    const confirmation = document.getElementById("confirmation");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        form.hidden = true;
+        confirmation.hidden = false;
+    });
+</script>
+
 </body>
 </html>
